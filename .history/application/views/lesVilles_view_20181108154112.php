@@ -17,7 +17,6 @@
                 <input type="checkbox" value="<?php echo $uneVille->idVille ?>"><?php echo $uneVille->nomVille ?>&nbsp;&nbsp;<?php echo $uneVille->scoreVille ?><br><br>
             <?php }?>
         </div>
-        <input type="button" value="+ 5 points" id="ajouter"><br><br>
     </div>
     
 </body>

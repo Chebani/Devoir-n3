@@ -11,13 +11,11 @@
 </head>
 <body>
     <div class="container-fluid">
-    <h1>Les villes</h1>
         <div class="container">
-            <?php foreach ($lesVilles as $uneVille) {?>
-                <input type="checkbox" value="<?php echo $uneVille->idVille ?>"><?php echo $uneVille->nomVille ?>&nbsp;&nbsp;<?php echo $uneVille->scoreVille ?><br><br>
+            <?php foreach ($lesVilles as $uneVilles) {?>
+                <input type="checkbox" onclick="afficherLesVilles($(this).val())" value="<?php echo $uneVille->idVille ?>"><?php echo $uneVille->nomVille ?>&nbsp;&nbsp;<?php echo $uneVille->scoreVille ?><br><br>
             <?php }?>
         </div>
-        <input type="button" value="+ 5 points" id="ajouter"><br><br>
     </div>
     
 </body>

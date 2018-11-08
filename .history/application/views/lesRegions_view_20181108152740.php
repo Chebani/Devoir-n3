@@ -8,16 +8,24 @@
     <script src='js/myFunctions.js'></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Les regions</title>
+    <script>
+    $(document).ready(function()
+    {
+       // $("input:checked[name='idMetier']").click
+       // (function (){
+       //    afficherLesVilles($(this).val())
+        // });
+        
+    });
+    </script>
 </head>
 <body>
     <div class="container-fluid">
-    <h1>Les villes</h1>
         <div class="container">
-            <?php foreach ($lesVilles as $uneVille) {?>
-                <input type="checkbox" value="<?php echo $uneVille->idVille ?>"><?php echo $uneVille->nomVille ?>&nbsp;&nbsp;<?php echo $uneVille->scoreVille ?><br><br>
+            <?php foreach ($lesRegions as $unRegion) {?>
+                <input name="region" type="checkbox" onclick="afficherLesVilles($(this).val())" value="<?php echo $unRegion->idRegion ?>"><?php echo $unRegion->nomRegion ?>&nbsp;&nbsp;<?php echo $unRegion->scoreRegion ?><br><br>
             <?php }?>
         </div>
-        <input type="button" value="+ 5 points" id="ajouter"><br><br>
     </div>
     
 </body>

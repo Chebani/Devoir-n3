@@ -27,7 +27,7 @@ function afficherLesVilles($idRegion){
         {
             
             type:"post",
-            url:"Main/afficherVilles",
+            url:"afficherVilles",
             data:"idRegion="+$idRegion,
             success:function(data)
             {
