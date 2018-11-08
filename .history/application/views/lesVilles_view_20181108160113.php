@@ -14,7 +14,7 @@
         $("#ajoutPoints").click
         (function (){
             $("input:checked[name='idVille']").each(function (i){
-                ajouterPoints($(this).attr('alt'));
+                ajouterPoints($(this).val());
             });
          });
         

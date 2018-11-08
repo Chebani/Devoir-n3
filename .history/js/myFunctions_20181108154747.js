@@ -48,7 +48,7 @@ function ajouterPoints($points){
             
             type:"post",
             url:"Main/ajouterLesPoints",
-            data:"points="+$points+"&region="+$('#region').val(),
+            data:"points="+$points,
             success:function(data)
             {
                 alert("Les points ont bien été ajoutés !")

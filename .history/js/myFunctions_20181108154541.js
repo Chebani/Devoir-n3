@@ -42,13 +42,13 @@ function afficherLesVilles($idRegion){
         );
 }
 
-function ajouterPoints($points){
+function ajouterPoints(){
     $.ajax(
         {
             
             type:"post",
             url:"Main/ajouterLesPoints",
-            data:"points="+$points+"&region="+$('#region').val(),
+            data:"points="+$points,
             success:function(data)
             {
                 alert("Les points ont bien été ajoutés !")

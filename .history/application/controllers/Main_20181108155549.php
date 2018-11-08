@@ -38,6 +38,6 @@ class Main extends CI_Controller {
 		$points = $_POST['points'];
 		$region = $_POST['region'];
 		$this->load->model("myModel");
-		$this->myModel->addPoints($points,$region);
+		$this->myModel->addPoints($points);
 	}
 }

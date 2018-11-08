@@ -14,8 +14,8 @@
             return $sql->result();
         }
     }
-    function addPoints($points,$region){
-        $sql = $this->db->query("update region SET scoreRegion = (scoreRegion + $points) WHERE idRegion = $region ");
+    function addPoints($points){
+        $sql = $this->db->query("update region SET scoreRegion = $point WHERE idRegion = 1 ");
         return $sql->result();
           }
         

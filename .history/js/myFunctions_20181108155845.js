@@ -43,22 +43,24 @@ function afficherLesVilles($idRegion){
 }
 
 function ajouterPoints($points){
-    $.ajax(
-        {
+    alert($points);
+    alert($('#region').val());
+ //   $.ajax(
+//        {
             
-            type:"post",
-            url:"Main/ajouterLesPoints",
-            data:"points="+$points+"&region="+$('#region').val(),
-            success:function(data)
-            {
-                alert("Les points ont bien été ajoutés !")
-            },
-            error:function()
-            {
-                alert('Erreur SQL');
-            }
-        }
-        );
+//            type:"post",
+ //           url:"Main/ajouterLesPoints",
+ //           data:"points="+$points+"&region="+$('#region').val(),
+ //           success:function(data)
+ //           {
+ //               alert("Les points ont bien été ajoutés !")
+ //           },
+ //           error:function()
+ //           {
+ //               alert('Erreur SQL');
+ //           }
+ //       }
+ //       );
 }
 
 

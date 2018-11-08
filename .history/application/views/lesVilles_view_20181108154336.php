@@ -8,16 +8,16 @@
     <script src='js/myFunctions.js'></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>Les regions</title>
-    
 </head>
 <body>
     <div class="container-fluid">
+    <h1>Les villes</h1>
         <div class="container">
-        <h1>Les regions</h1>
-            <?php foreach ($lesRegions as $unRegion) {?>
-                <input name="region" type="checkbox" onclick="afficherLesVilles($(this).val())" value="<?php echo $unRegion->idRegion ?>"><?php echo $unRegion->nomRegion ?>&nbsp;&nbsp;<?php echo $unRegion->scoreRegion ?><br><br>
+            <?php foreach ($lesVilles as $uneVille) {?>
+                <input type="checkbox" value="<?php echo $uneVille->idVille ?>"><?php echo $uneVille->nomVille ?>&nbsp;&nbsp;<?php echo $uneVille->scoreVille ?><br><br>
             <?php }?>
         </div>
+        <input type="button" onclick="ajouterPoints()" value="+ 5 points" id="ajouter"><br><br>
     </div>
     
 </body>

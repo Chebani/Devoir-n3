@@ -11,10 +11,10 @@
     <script>
     $(document).ready(function()
     {
-        $("#ajoutPoints").click
+        $("#insererMetier").click
         (function (){
-            $("input:checked[name='idVille']").each(function (i){
-                ajouterPoints($(this).attr('alt'));
+            $("input:checked[name='idMetier']").each(function (i){
+                inserer($(this).val());
             });
          });
         
@@ -26,11 +26,10 @@
     <h1>Les villes</h1>
         <div class="container">
             <?php foreach ($lesVilles as $uneVille) {?>
-                <input type="checkbox" name="idVille" value="<?php echo $uneVille->idVille ?>" alt="<?php echo $uneVille->scoreVille ?>"><?php echo $uneVille->nomVille ?>&nbsp;&nbsp;<?php echo $uneVille->scoreVille ?><br><br>
+                <input type="checkbox" value="<?php echo $uneVille->idVille ?>"><?php echo $uneVille->nomVille ?>&nbsp;&nbsp;<?php echo $uneVille->scoreVille ?><br><br>
             <?php }?>
         </div>
-        <input type="button" id="ajoutPoints" value="+ 5 points" id="ajouter"><br><br>
-        <input type="hidden" id="region" value="<?php echo $idRegion[0] ?>" id="ajouter">
+        <input type="button" name="ajoutPoints" value="+ 5 points" id="ajouter"><br><br>
     </div>
     
 </body>

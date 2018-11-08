@@ -28,7 +28,6 @@ class Main extends CI_Controller {
 
 	function afficherVilles(){
 		$idRegion = $_POST['idRegion'];
-		$data["idRegion"] =  $_POST['idRegion'];
 		$this->load->model("myModel");
 		$data["lesVilles"]=$this->myModel->getLesVilles($idRegion);
 		$this->load->view("lesVilles_view",$data); 
@@ -36,8 +35,7 @@ class Main extends CI_Controller {
 
 	function ajouterLesPoints(){
 		$points = $_POST['points'];
-		$region = $_POST['region'];
 		$this->load->model("myModel");
-		$this->myModel->addPoints($points,$region);
+		$this->myModel->addPoints($points);
 	}
 }
