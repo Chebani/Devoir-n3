@@ -12,7 +12,6 @@ function seConnecter()
         {
             $("#lesRegions").empty();
             $("#lesRegions").append(data);
-            $("#lesVilles").empty();
         },
         error:function()
         {

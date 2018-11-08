@@ -36,7 +36,6 @@ class Main extends CI_Controller {
 
 	function ajouterLesPoints(){
 		$points = $_POST['points'];
-		$region = $_POST['region'];
 		$ville = $_POST['ville'];
 		$this->load->model("myModel");
 		$this->myModel->addPoints($points,$ville);

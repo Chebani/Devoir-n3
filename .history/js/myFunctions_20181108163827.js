@@ -12,7 +12,6 @@ function seConnecter()
         {
             $("#lesRegions").empty();
             $("#lesRegions").append(data);
-            $("#lesVilles").empty();
         },
         error:function()
         {
@@ -51,7 +50,7 @@ function ajouterPoints($points){
             
             type:"post",
           url:"Main/ajouterLesPoints",
-           data:"points="+$points+"&ville="+$("input[name='idVille']").val(),
+           data:"points="+$points+"&region="+$('#region').val()+"&ville="+$("input[name='idVille']").val(),
            success:function(data)
           {
                alert("Les points ont bien été ajoutés !")

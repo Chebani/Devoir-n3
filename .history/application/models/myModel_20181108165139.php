@@ -15,7 +15,7 @@
         }
     }
     function addPoints($points,$region,$ville){
-        $sql = $this->db->query("update ville SET scoreVille = (scoreVille + ".$points.") WHERE idVille = $ville");
+        $sql = $this->db->query("update ville SET scoreVille = (scoreVille + $points) WHERE idVille = $ville");
         return $sql->result();
           }
         
