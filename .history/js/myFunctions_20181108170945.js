@@ -43,19 +43,17 @@ function afficherLesVilles($idRegion){
         );
 }
 
-function ajouterPoints(){
+function ajouterPoints($points){
     
     $.ajax(
         {
             
             type:"post",
-            url:"Main/ajouterLesPoints",
-           data:"region="+$('#region').val(),
+          url:"Main/ajouterLesPoints",
+           data:"points="+$points+"&region="+$('#region').val()+"&ville="+$("input[name='idVille']").val(),
            success:function(data)
           {
-               alert("Les points ont bien été ajoutés !");
-               location.reload();
-               alert("Veuillez vous reconnecter pour afficher les resultats");
+               alert("Les points ont bien été ajoutés !")
           },
           error:function()
            {

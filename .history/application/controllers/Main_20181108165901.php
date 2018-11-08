@@ -35,15 +35,10 @@ class Main extends CI_Controller {
 	}
 
 	function ajouterLesPoints(){
+		$points = $_POST['points'];
 		$region = $_POST['region'];
+		$ville = $_POST['ville'];
 		$this->load->model("myModel");
-		$this->myModel->addPoints($region);
-		$this->myModel->updateRegion($region);
-	}
-
-	function resultat(){
-		$this->load->model("myModel");
-		$data["lesRegions"]=$this->myModel->getMesRegion($_SESSION['statutUser']);
-	  	$this->load->view("lesRegions_view",$data); 
+		$this->myModel->addPoints($points,$region,$ville);
 	}
 }

@@ -17,6 +17,7 @@
 
     function addPoints($idRegion){
         $sql = $this->db->query("update ville set scoreVille =(scoreVille + 5) WHERE numRegion = $idRegion");
+        return $sql->result();
         }
         
           public function login_user($nomUser){
@@ -36,7 +37,8 @@
         
           }
         function updateRegion($region){
-        $sql = $this->db->query("update region set scoreRegion = (SELECT SUM(scoreVille) from ville where numRegion = $region)");
+            $sql = $this->db->query("update region set scoreRegion = (SELECT SUM(scoreVille) from ville where numRegion = $region)");
+            return $sql->result();
         }
     }
 ?>

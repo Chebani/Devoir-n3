@@ -53,9 +53,7 @@ function ajouterPoints(){
            data:"region="+$('#region').val(),
            success:function(data)
           {
-               alert("Les points ont bien été ajoutés !");
-               location.reload();
-               alert("Veuillez vous reconnecter pour afficher les resultats");
+               alert("Les points ont bien été ajoutés !")
           },
           error:function()
            {

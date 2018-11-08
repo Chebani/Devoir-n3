@@ -54,8 +54,7 @@ function ajouterPoints(){
            success:function(data)
           {
                alert("Les points ont bien été ajoutés !");
-               location.reload();
-               alert("Veuillez vous reconnecter pour afficher les resultats");
+               window.location.href="Main/connexion";
           },
           error:function()
            {

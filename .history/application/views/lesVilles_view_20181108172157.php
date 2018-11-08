@@ -24,7 +24,7 @@
     <h1>Les villes</h1>
         <div class="container">
             <?php foreach ($lesVilles as $uneVille) {?>
-                <p name="idVille" value="<?php echo $uneVille->idVille ?>" alt="5"><?php echo $uneVille->nomVille ?>&nbsp;&nbsp;<?php echo $uneVille->scoreVille ?></p>
+                <?php echo $uneVille->nomVille ?>&nbsp;&nbsp;<?php echo $uneVille->scoreVille ?><br><br>
             <?php }?>
         </div>
         <input type="button" id="ajoutPoints" value="+ 5 points" id="ajouter"><br><br>

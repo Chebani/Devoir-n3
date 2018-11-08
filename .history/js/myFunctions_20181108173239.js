@@ -45,24 +45,7 @@ function afficherLesVilles($idRegion){
 
 function ajouterPoints(){
     
-    $.ajax(
-        {
-            
-            type:"post",
-            url:"Main/ajouterLesPoints",
-           data:"region="+$('#region').val(),
-           success:function(data)
-          {
-               alert("Les points ont bien été ajoutés !");
-               location.reload();
-               alert("Veuillez vous reconnecter pour afficher les resultats");
-          },
-          error:function()
-           {
-               alert('Erreur SQL');
-           }
-       }
-     );
+    alert($('#region').val());
 
 }
 

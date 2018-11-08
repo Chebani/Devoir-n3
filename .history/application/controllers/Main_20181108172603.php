@@ -40,10 +40,4 @@ class Main extends CI_Controller {
 		$this->myModel->addPoints($region);
 		$this->myModel->updateRegion($region);
 	}
-
-	function resultat(){
-		$this->load->model("myModel");
-		$data["lesRegions"]=$this->myModel->getMesRegion($_SESSION['statutUser']);
-	  	$this->load->view("lesRegions_view",$data); 
-	}
 }
