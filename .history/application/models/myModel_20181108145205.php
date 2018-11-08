@@ -1,7 +1,7 @@
 <?php 
     class MyModel extends CI_Model{
-        function getLesVilles($idRegion){
-            $sql = $this->db->query("select * from ville where numRegion=$idRegion");
+        function getAllConf(){
+            $sql = $this->db->query("select IDCONFERENCE, TITRE from conference GROUP BY IDCONFERENCE, TITRE");
             return $sql->result();
         }
 

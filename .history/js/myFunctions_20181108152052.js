@@ -23,23 +23,7 @@ function seConnecter()
 }
 
 function afficherLesVilles($idRegion){
-    $.ajax(
-        {
-            
-            type:"post",
-            url:"Main/afficherLesVilles",
-            data:"idRegion="+$idRegion,
-            success:function(data)
-            {
-                $("#lesVilles").empty();
-                $("#lesVilles").append(data);
-            },
-            error:function()
-            {
-                alert('Erreur SQL');
-            }
-        }
-        );
+    alert($idRegion);
 }
 
 

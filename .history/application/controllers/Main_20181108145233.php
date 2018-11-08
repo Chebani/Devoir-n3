@@ -25,11 +25,4 @@ class Main extends CI_Controller {
 	  $this->load->view("lesRegions_view",$data); 
 		
 	}
-
-	function afficherLesVilles(){
-		$idRegion = $_POST['idRegion'];
-		$this->load->model("myModel");
-		$data["lesVilles"]=$this->myModel->getLesVilles($idRegion);
-		$this->load->view("lesVilles_view",$data); 
-	}
 }

@@ -31,8 +31,8 @@ function afficherLesVilles($idRegion){
             data:"idRegion="+$idRegion,
             success:function(data)
             {
-                $("#lesVilles").empty();
-                $("#lesVilles").append(data);
+                $("#lesRegions").empty();
+                $("#lesRegions").append(data);
             },
             error:function()
             {

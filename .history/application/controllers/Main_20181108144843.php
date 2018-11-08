@@ -22,14 +22,7 @@ class Main extends CI_Controller {
         $_SESSION['statutUser']=$data['statutUser'];
 	  }
 	  $data["lesRegions"]=$this->myModel->getMesRegion($_SESSION['statutUser']);
-	  $this->load->view("lesRegions_view",$data); 
+	  $this->load->view("lesRegions_view"); 
 		
-	}
-
-	function afficherLesVilles(){
-		$idRegion = $_POST['idRegion'];
-		$this->load->model("myModel");
-		$data["lesVilles"]=$this->myModel->getLesVilles($idRegion);
-		$this->load->view("lesVilles_view",$data); 
 	}
 }

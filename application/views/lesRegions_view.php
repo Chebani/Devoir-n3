@@ -7,14 +7,14 @@
     <script src='jQuery/jquery-3.1.1.js'></script>
     <script src='js/myFunctions.js'></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Page</title>
+    <title>Les regions</title>
     <script>
     $(document).ready(function()
     {
-        $("#connexion").click
-        (function (){
-            seConnecter();
-         });
+       // $("input:checked[name='idMetier']").click
+       // (function (){
+       //     seConnecter();
+        // });
         
     });
     </script>
@@ -22,11 +22,9 @@
 <body>
     <div class="container-fluid">
         <div class="container">
-            <h1>Devoir n°3</h1><br><br>
-            <h2>Votre nom :</h2><br><br>
-            <input type="text" id="nom"><br><br>
-            <input type="button" value="Connexion" id="connexion"><br><br>
-            <div id="lesRegions"></div>
+            <?php foreach ($lesRegions as $unRegion) {?>
+                <input type="checkbox" onclick="afficherLesVilles($(this).val())" value="<?php echo $unRegion->idRegion ?>"><?php echo $unRegion->nomRegion ?>&nbsp;&nbsp;<?php echo $unRegion->scoreRegion ?><br><br>
+            <?php }?>
         </div>
     </div>
     
